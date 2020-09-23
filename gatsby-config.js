@@ -1,11 +1,4 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: "My Blog",
     author: "Ari Asril",
@@ -25,7 +18,11 @@ module.exports = {
   plugins: [
     {
       resolve: "gatsby-theme-blog",
-      options: {},
+      options: {
+      	  basePath: "/blog",
+      	  preset: "@theme-ui/preset-funk",
+      	  prismPreset: "prism-okaidia"
+	  },
     },
   ],
 }
